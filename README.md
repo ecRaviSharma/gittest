@@ -3,10 +3,10 @@ Introduction to git
 
 Usage
 
-mkdir <directoryname>
-cd <directoryname>
+mkdir <directoryname>.
+cd <directoryname>.
 
-git init .                                        // To initialize the current local folder with git
+git init .                                        // To initialize the current local folder with git.
 git config --global user.name ecRaviSharma        // To add the username
 git config --global user.email rsbvm45@gmail.c    // To add the email
 git add <filename>                                // To add the file in the staging area
