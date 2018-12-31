@@ -1,5 +1,5 @@
 # gittest
-Introduction to git
+Introduction to GitHub
 
 # Usage
 
