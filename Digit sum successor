@@ -1,0 +1,54 @@
+import java.util.*;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+class Solution {
+    Solution(){}
+
+    long digitSum(long N){
+        long sum = 0;
+        long temp = 0;
+        while(true){
+            temp = N%10;
+            sum += temp;
+            N = N/10;
+            if(N%10==0 && N/10==0)
+                break;
+        }
+        return sum;
+    }
+
+    long greaterNumber(long N){
+        long num = 0;
+        long sum = 0;
+        long numIndSum = 0;
+        if(N >= 10){
+            num = N;
+            numIndSum = digitSum(num);
+        } else if(N < 10 && N >= 1){
+            num = 10;
+            numIndSum = N;
+        }
+        while(true){
+            ++num;
+            sum = digitSum(num);
+            if(sum==numIndSum) break;
+        }
+        return num;
+    }
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        long N = in.nextLong();
+
+        Solution sol = new Solution();
+        long num = sol.greaterNumber(N);
+        // Write an answer using System.out.println()
+        // To debug: System.err.println("Debug messages...");
+
+        System.out.println(num);
+        in.close();
+    }
+}
